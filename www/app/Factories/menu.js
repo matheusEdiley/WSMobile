@@ -13,13 +13,13 @@ mainApp.factory('menu', [function() {
 					"Link": "appAdmin.ClienteCadastro",
 					"Icone": "floppy-disk"
 				}, {
+					"Nome": "Meus dados",
+					"Link": "appAdmin.Main",
+					"Icone": "list-alt"
+				}, {
 					"Nome": "Serviços",
 					"Link": "appAdmin.ClienteServ",
 					"Icone": "tasks"
-				}, {
-					"Nome": "Serviços Utilizados",
-					"Link": "appAdmin.ClienteSrvUtil",
-					"Icone": "list-alt"
 				}];
 			} else if (tipo == "Prestador") {
 				menu = [{
@@ -27,9 +27,9 @@ mainApp.factory('menu', [function() {
 					"Link": "appAdmin.PrestadorCadastro.InfoPessoais",
 					"Icone": "floppy-disk"
 				}, {
-					"Nome": "Meus serviços contratados",
-					"Link": "appAdmin.PrestadorServContr",
-					"Icone": "credit-card"
+					"Nome": "Meus dados",
+					"Link": "appAdmin.Main",
+					"Icone": "list-alt"
 				}, {
 					"Nome": "Cadastro de serviços",
 					"Link": "appAdmin.PrestadorCadServ",
