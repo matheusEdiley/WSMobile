@@ -1,0 +1,24 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">WORKSquad</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" ng-repeat="item in Menu">
+                <li><a ui-sref="{{ item.Link }}"><i class="glyphicon glyphicon-{{ item.Icone }}"></i> &nbsp;{{ item.Nome }}</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a ng-click="Logout()"><i class="glyphicon glyphicon-log-out"></i> &nbsp;Sair</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br /><br />
+<div style="text-align: center" ui-view>
+
+</div>

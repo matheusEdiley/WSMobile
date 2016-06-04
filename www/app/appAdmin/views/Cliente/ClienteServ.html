@@ -1,0 +1,53 @@
+<div style="text-align: center" class="jumbotron">
+  <h2> Serviços disponíveis</h2>
+  <p></p>
+</div>
+<div ng-if="Flg" class="alert alert-success fade in" style="margin-top:18px;" focus>
+  <a href="" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+  <strong>Salvo com sucesso!</strong> Serviço Contratado com sucesso
+</div>
+<div class="container">
+  <div class="row" >
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="input-group">
+        <div class="input-group-btn search-panel">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          <span id="search_concept">{{ filtro }}</span> <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a ng-click="SelecionarFiltro('Categoria')">Categoria</a></li>
+            <li class="divider"></li>
+            <li><a ng-click="SelecionarFiltro('Prestador')">Prestador</a></li>
+          </ul>
+        </div>
+        <input type="hidden" name="search_param" value="all" id="search_param">
+        <input type="text" class="form-control" ng-model="value" name="x" placeholder="Procurar por...">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" ng-click="Pesquisar(value)" type="button"><span class="glyphicon glyphicon-search"></span></button>
+        </span>
+      </div>
+    </div
+  </div>
+</div>
+<br />
+<br />
+<!--pricing tables 2-->
+<section class="container show-source" style="width: 99%">
+  <div class="row" >
+    <div class="col-md-4" ng-repeat="servico in servicos">
+      <div class="panel panel-info">
+        <div class="panel-heading"><h3 class="text-center"> {{servico.nome}}</h3></div>
+        <div class="panel-body text-center">
+          <p class="lead" style="font-size:40px"><strong> R$ {{servico.valor}} / Hora</strong></p>
+        </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item"><i class="icon-ok text-danger"></i> {{servico.categoria}} </li>
+          <li class="list-group-item"><i class="icon-ok text-danger"></i> {{servico.descricao}} </li>
+        </ul>
+        <div class="panel-footer">
+          <a class="btn btn-lg btn-block btn-danger" ng-click="ContratarServico(servico)">Contratar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

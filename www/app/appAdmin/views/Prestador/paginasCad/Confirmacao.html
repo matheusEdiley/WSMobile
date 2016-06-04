@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form role="form">
+        <h2>Finalize o cadastro<br /><small>  Por favor, confirme os dados e finalize o cadastro.</small></h2>
+        <br />
+        <div ng-if="FlgSalvo" class="alert alert-success fade in" style="margin-top:18px;" focus>
+          <a href="" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+          <strong>Salvo com sucesso!</strong> Prestador salvo com sucesso.
+        </div>
+        <hr class="colorgraph">
+        Caso queira cadastrar novamente os dados,clique em cancelar e volte para as informações iniciais
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-12 col-md-6"><button ng-click="Salvar(pre)" class="btn btn-success btn-block btn-lg"><i class="glyphicon glyphicon-ok"></i> Salvar</button></div>
+          <div class="col-xs-12 col-md-6"><button ng-click="Cancelar()" class="btn btn-danger btn-block btn-lg"><i class="glyphicon glyphicon-remove"></i>  Cancelar</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
