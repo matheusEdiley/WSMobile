@@ -3,14 +3,14 @@ var mainApp = angular.module("MainApp");
 mainApp.service('PrestadorService', function($http, autenticar) {
 
 	this.addPrestador = function(cliente) {
-		return $http.post('/app/prestador/', cliente);
+		return $http.post('https://appworksquad.herokuapp.com/app/prestador/', cliente);
 	}
 
 	this.searchPrestador = function(user) {
-		return $http.get('/app/prestador/' + user._id);
+		return $http.get('https://appworksquad.herokuapp.com/app/prestador/' + user._id);
 	}
 
 	this.allPrestador = function() {
-		return $http.get('/app/prestador/undefined');
+		return $http.get('https://appworksquad.herokuapp.com/app/prestador/undefined');
 	}
 });

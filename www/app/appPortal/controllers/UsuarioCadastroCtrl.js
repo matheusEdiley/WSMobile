@@ -22,7 +22,7 @@
 
 			entid.user.senha = CryptoJS.SHA1(entid.user.senha).toString();
 
-			$http.post('/user', entid.user)
+			$http.post('https://appworksquad.herokuapp.com/user', entid.user)
 				.then(onCadastro, onError);
 
 

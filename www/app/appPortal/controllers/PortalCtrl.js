@@ -19,12 +19,11 @@
 
 		var onLoginRealizado = function(callback) {
 
-			CloseModal();
 
 			$window.sessionStorage.setItem('usuario', angular.toJson(callback.data.user));
 			$window.sessionStorage.setItem('token', callback.data.token);
 
-			if (callback.data.user.tipo == "Cliente") {
+			if (callback.	data.user.tipo == "Cliente") {
 				ClienteService.searchCliente(callback.data.user)
 					.then(onCadastroLocalizado, onError);
 			} else if (callback.data.user.tipo == "Prestador") {
@@ -39,8 +38,8 @@
 
 			usu.senha = CryptoJS.SHA1(usu.senha).toString();
 
-			$http.post('/login', usu)
-				.then(onLoginRealizado, onError);
+			$http.post('https://appworksquad.herokuapp.com/login', usu)
+				.then(onLoginRealizado, onError).header("Access-Control-Allow-Origin: *");
 
 		};
 

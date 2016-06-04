@@ -126,7 +126,7 @@
     mainApp.config(function($stateProvider, $urlRouterProvider) {
         //
         // For any unmatched url, redirect to /state1
-        $urlRouterProvider.otherwise("appAdmin/PrestadorCadastro/InfoPessoais");
+        //$urlRouterProvider.otherwise("appAdmin/PrestadorCadastro/InfoPessoais");
 
         $stateProvider.
         state('appAdmin.PrestadorCadastro.InfoPessoais', {
