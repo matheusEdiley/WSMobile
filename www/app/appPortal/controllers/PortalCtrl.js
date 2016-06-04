@@ -39,7 +39,7 @@
 			usu.senha = CryptoJS.SHA1(usu.senha).toString();
 
 			$http.post(	'https://appworksquad.herokuapp.com/login', usu)
-				.then(onLoginRealizado, onError).header("Access-Control-Allow-Origin: *");
+				.then(onLoginRealizado, onError);
 
 		};
 
